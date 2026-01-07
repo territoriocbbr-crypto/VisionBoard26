@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f5f2;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.goal {
+  margin-bottom: 12px;
+}
+
+.goal-header {
+  width: 100%;
+  padding: 15px;
+  background: #e6dfd7;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.goal-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: white;
+  padding: 0 15px;
+}
+
+.goal.open .goal-content {
+  max-height: 200px;
+  padding: 15px;
+}
+
+.complete-btn {
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#roulette {
+  font-size: 80px;
+  text-align: center;
+  transition: transform 2s ease;
+}
