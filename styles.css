@@ -1,153 +1,95 @@
-/* =========================
-   VARIABLES DE COLOR
-========================= */
-:root {
-  --blue-main: #5B8DEF;
-  --blue-light: #EAF1FF;
-  --blue-dark: #2F4C8F;
-  --paper-bg: #ffffff;
-}
-
-/* =========================
-   RESET BÁSICO
-========================= */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   BODY GENERAL
-========================= */
 body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, var(--blue-light), #ffffff);
-  color: var(--blue-dark);
-  min-height: 100vh;
+  background:
+    linear-gradient(rgba(240,246,255,0.95), rgba(240,246,255,0.95)),
+    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #3a4a6b;
 }
 
-/* =========================
-   HEADER
-========================= */
-.main-header {
+header {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 40px 20px;
 }
 
-.main-header h1 {
-  font-weight: 600;
-  color: var(--blue-main);
-  font-size: 2.2rem;
-  user-select: none;
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #5b7cfa;
+  margin-bottom: 10px;
 }
 
-.subtitle {
-  font-size: 0.95rem;
+header p {
+  font-size: 1.1rem;
   opacity: 0.8;
 }
 
-/* =========================
-   CONTENEDOR DE METAS
-========================= */
-.goals-container {
+.board {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px;
 }
 
-/* =========================
-   PAPELITO (META)
-========================= */
-.goal {
-  perspective: 1000px;
-}
-
-.paper {
-  background: var(--paper-bg);
-  padding: 1.2rem 1.2rem 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+.note {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
   cursor: pointer;
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   position: relative;
-  min-height: 150px;
-}
-
-/* =========================
-   EFECTO PAPEL CERRADO
-========================= */
-.paper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.4),
-    rgba(0, 0, 0, 0.05)
-  );
-  border-radius: 10px;
-  pointer-events: none;
-}
-
-/* =========================
-   TÍTULO DE META
-========================= */
-.paper h2 {
-  font-size: 1.05rem;
-  font-weight: 500;
-  margin-bottom: 0.8rem;
-  color: var(--blue-dark);
-}
-
-/* =========================
-   FRASE (OCULTA POR DEFECTO)
-========================= */
-.phrase {
-  font-family: 'Playfair Display', serif;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  opacity: 0;
-  max-height: 0;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
   overflow: hidden;
-  transition: opacity 0.5s ease, max-height 0.6s ease;
 }
 
-/* =========================
-   PAPEL ABIERTO
-========================= */
-.goal.open .paper {
-  transform: translateY(-8px) rotateX(8deg);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+.note-front {
+  text-align: center;
 }
 
-.goal.open .phrase {
+.note h3 {
+  margin: 10px 0 0;
+  font-weight: 400;
+}
+
+.emoji {
+  font-size: 2rem;
+}
+
+.note-back {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+.note.open {
+  transform: translateY(-25px) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.note.open .note-back {
   opacity: 1;
-  max-height: 500px;
+  transform: translateY(0);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 480px) {
-  .goals-container {
-    padding: 1.2rem;
-    gap: 1rem;
-  }
+.note.open .note-front {
+  opacity: 0.3;
+}
 
-  .paper {
-    padding: 1rem;
-  }
-
-  .paper h2 {
-    font-size: 1rem;
-  }
-
-  .phrase {
-    font-size: 0.9rem;
-  }
+#reset {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  opacity: 0.2;
 }
