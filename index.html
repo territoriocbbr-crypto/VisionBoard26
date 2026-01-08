@@ -2,280 +2,259 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vision Board</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <h1>Vision Board</h1>
-  <p class="subtitle">Cada meta se abre cuando se cumple 🤍</p>
+  <header class="main-header">
+    <h1 id="secret-reset">Vision Board</h1>
+    <p class="subtitle">Un paso a la vez, todo cuenta</p>
+  </header>
 
-  <div id="goals">
+  <main class="goals-container">
 
     <!-- 1 -->
-    <div class="goal" data-id="salud" data-points="20">
-      <div class="goal-header">
-        <h3>Salud</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Gracias por elegirte incluso en los días difíciles. Tu cuerpo también celebra este logro. Y yo… respiro con más tranquilidad.
+    <div class="goal" data-id="1" data-points="20">
+      <div class="paper">
+        <h2>Salud</h2>
+        <p class="phrase">
+          Gracias por elegirte incluso en los días difíciles. Tu cuerpo también celebra este logro. Y yo… respiro con más tranquilidad.
+        </p>
       </div>
     </div>
 
     <!-- 2 -->
-    <div class="goal" data-id="viajes" data-points="30">
-      <div class="goal-header">
-        <h3>Viajes</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Fuiste valiente al salir, y el mundo respondió abriéndote caminos.<br>
-        Cada viaje te devolvió un poco más de ti.
+    <div class="goal" data-id="2" data-points="30">
+      <div class="paper">
+        <h2>Viajes</h2>
+        <p class="phrase">
+          Fuiste valiente al salir, y el mundo respondió abriéndote caminos.  
+          Cada viaje te devolvió un poco más de ti.
+        </p>
       </div>
     </div>
 
     <!-- 3 -->
-    <div class="goal" data-id="laboral" data-points="30">
-      <div class="goal-header">
-        <h3>Estabilidad laboral</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Todo el esfuerzo silencioso encontró su lugar. Te lo mereces; siempre has sido una gran trabajadora y la más hábil en tu campo. Te deseo más y más crecimiento laboral. Vamos por más puntos.
+    <div class="goal" data-id="3" data-points="30">
+      <div class="paper">
+        <h2>Estabilidad laboral</h2>
+        <p class="phrase">
+          Todo el esfuerzo silencioso encontró su lugar. Te lo mereces, siempre has sido una gran trabajadora y la más hábil en tu campo. Te deseo más y más crecimiento laboral. Vamos por más puntos.
+        </p>
       </div>
     </div>
 
     <!-- 4 -->
-    <div class="goal" data-id="amor-propio" data-points="50">
-      <div class="goal-header">
-        <h3>Amor propio</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Aprendiste a tratarte con la misma ternura que das a los demás. Eres un tesoro, no para presumir, sino para apreciar y valorar.
+    <div class="goal" data-id="4" data-points="50">
+      <div class="paper">
+        <h2>Amor propio</h2>
+        <p class="phrase">
+          Aprendiste a tratarte con la misma ternura que das a los demás. Eres un tesoro, no para presumir, sino para apreciar y valorar.
+        </p>
       </div>
     </div>
 
     <!-- 5 -->
-    <div class="goal" data-id="pasaporte" data-points="30">
-      <div class="goal-header">
-        <h3>Pasaporte</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Un documento pequeño… y un mundo entero diciendo “bienvenida”.
+    <div class="goal" data-id="5" data-points="30">
+      <div class="paper">
+        <h2>Pasaporte</h2>
+        <p class="phrase">
+          Un documento pequeño… y un mundo entero diciendo “bienvenida”.
+        </p>
       </div>
     </div>
 
     <!-- 6 -->
-    <div class="goal" data-id="reir" data-points="50">
-      <div class="goal-header">
-        <h3>Reír más seguido</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Excelenteeee, me alegra saber que estás cada vez más feliz. Quizá no siempre logre sacarte una sonrisa, pero espero que nunca falte la esperanza de tu sonrisa en el mundo.
+    <div class="goal" data-id="6" data-points="50">
+      <div class="paper">
+        <h2>Reír más seguido</h2>
+        <p class="phrase">
+          Excelenteeee me alegra saber que estás cada vez más feliz. Quizá no siempre logre sacarte una sonrisa, pero espero que nunca falte la esperanza de tu sonrisa en el mundo.
+        </p>
       </div>
     </div>
 
     <!-- 7 -->
-    <div class="goal" data-id="licencia" data-points="30">
-      <div class="goal-header">
-        <h3>Licencia</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Lo lograste, te felicito muchísimo. Ahora tú llevas el volante, en todos los sentidos, y espero que en algunas de esas ocasiones pueda ser tu copiloto.
+    <div class="goal" data-id="7" data-points="30">
+      <div class="paper">
+        <h2>Licencia</h2>
+        <p class="phrase">
+          Lo lograste, te felicito muchísimo. Ahora tú llevas el volante, en todos los sentidos, y espero que en algunas de esas ocasiones pueda ser tu copiloto.
+        </p>
       </div>
     </div>
 
     <!-- 8 -->
-    <div class="goal" data-id="ahorrar" data-points="50">
-      <div class="goal-header">
-        <h3>Ahorrar</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Paso a paso construiste tranquilidad. Y eso también es éxito… ya puedes comprarme algo también jeje.
+    <div class="goal" data-id="8" data-points="50">
+      <div class="paper">
+        <h2>Ahorrar</h2>
+        <p class="phrase">
+          Paso a paso construiste tranquilidad. Y eso también es éxito… ya puedes comprarme algo también jeje.
+        </p>
       </div>
     </div>
 
     <!-- 9 -->
-    <div class="goal" data-id="apartamento" data-points="20">
-      <div class="goal-header">
-        <h3>Tener mi apartamento</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Aquí empieza un hogar hecho a tu medida y a tu ritmo. Aprovecha tu espacio y acomódalo a tu gusto.
+    <div class="goal" data-id="9" data-points="20">
+      <div class="paper">
+        <h2>Tener mi apartamento</h2>
+        <p class="phrase">
+          Aquí empieza un hogar hecho a tu medida y a tu ritmo. Aprovecha tu espacio y acomódalo a tu gusto.
+        </p>
       </div>
     </div>
 
     <!-- 10 -->
-    <div class="goal" data-id="instrumento" data-points="50">
-      <div class="goal-header">
-        <h3>Música (aprender un instrumento)</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        ¿Qué? ¿En serio? ¿Lograste aprender un instrumento? Te felicito, pero por favor dame el placer de escucharte practicar. ¿Qué sería más lindo que tu carita acompañada de música que tú misma haces?
+    <div class="goal" data-id="10" data-points="50">
+      <div class="paper">
+        <h2>Música (aprender un instrumento)</h2>
+        <p class="phrase">
+          ¿Qué? ¿En serio? ¿Lograste aprender un instrumento? Te felicito, pero por favor dame el placer de escucharte practicar. ¿Qué sería más lindo que tu carita acompañada de música que tú misma haces?
+        </p>
       </div>
     </div>
 
     <!-- 11 -->
-    <div class="goal" data-id="dios" data-points="50">
-      <div class="goal-header">
-        <h3>Acercarme a Dios</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Bien, ahora soy yo quien necesita acercarse a Él y pedir que pueda seguir acompañándote en tu camino. No fue distancia lo que recorriste, fue profundidad.
+    <div class="goal" data-id="11" data-points="50">
+      <div class="paper">
+        <h2>Acercarme a Dios</h2>
+        <p class="phrase">
+          Bien, ahora soy yo quien necesita acercarse a Él y pedir que pueda seguir acompañándote en tu camino. No fue distancia lo que recorriste, fue profundidad.
+        </p>
       </div>
     </div>
 
     <!-- 12 -->
-    <div class="goal" data-id="agradecer" data-points="50">
-      <div class="goal-header">
-        <h3>Agradecer</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Aprendiste a ver lo que antes pasaba desapercibido. Muchas veces no somos conscientes de lo que nos rodea y de lo que hacen quienes nos rodean. Si se esfuerzan por ti es porque eres valiosa, pero también es valioso el esfuerzo que te dedican. Vamos por más puntos, monita.
+    <div class="goal" data-id="12" data-points="50">
+      <div class="paper">
+        <h2>Agradecer</h2>
+        <p class="phrase">
+          Aprendiste a ver lo que antes pasaba desapercibido. Si alguien se esfuerza por ti es porque eres valiosa, pero también es valioso el esfuerzo que te dedican. Vamos por más puntos monita.
+        </p>
       </div>
     </div>
 
     <!-- 13 -->
-    <div class="goal" data-id="dinero" data-points="20">
-      <div class="goal-header">
-        <h3>Dinero</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Hoy el dinero dejó de ser peso y se volvió herramienta. Que este sea un motivo para continuar con tus ideas, con tus sueños y, ¿por qué no?, con tus antojos. Date gusto.
+    <div class="goal" data-id="13" data-points="20">
+      <div class="paper">
+        <h2>Dinero</h2>
+        <p class="phrase">
+          Hoy el dinero dejó de ser peso y se volvió herramienta. Que este sea un motivo para continuar con tus ideas, tus sueños… ¿y por qué no? Tus antojos, date gusto.
+        </p>
       </div>
     </div>
 
     <!-- 14 -->
-    <div class="goal" data-id="alimentacion" data-points="50">
-      <div class="goal-header">
-        <h3>Alimentarme bien</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Urraaaaa, me alegra que completaras este, aunque ojalá puedas seguir recibiendo la comida que te envíe; mi forma de consentirte era alimentándote. Te cuidaste sin castigarte. Eso también es amor.
+    <div class="goal" data-id="14" data-points="50">
+      <div class="paper">
+        <h2>Alimentarme bien</h2>
+        <p class="phrase">
+          Urraaaaa me alegra que completaras este. Aunque ojalá puedas seguir recibiendo la comida que te envíe. Te cuidaste sin castigarte. Eso también es amor.
+        </p>
       </div>
     </div>
 
     <!-- 15 -->
-    <div class="goal" data-id="leer" data-points="50">
-      <div class="goal-header">
-        <h3>Leer</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Cada página fue una conversación contigo misma. Sigue conociéndote, sigue aprendiendo y nunca dejes de crecer. Si hoy eres fascinante, ¿cómo serás en unos años?
+    <div class="goal" data-id="15" data-points="50">
+      <div class="paper">
+        <h2>Leer</h2>
+        <p class="phrase">
+          Cada página fue una conversación contigo misma. Si hoy eres fascinante, ¿cómo serás en unos años? Sigue creciendo.
+        </p>
       </div>
     </div>
 
     <!-- 16 -->
-    <div class="goal" data-id="emprendimiento" data-points="50">
-      <div class="goal-header">
-        <h3>Emprendimiento</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Te atreviste a creer en tu idea cuando aún era frágil, y hoy tienes el empuje para cumplirla. Recuerda que esto es solo una pequeña parte de todo lo que eres capaz de hacer. Sigue más allá de la meta.
+    <div class="goal" data-id="16" data-points="50">
+      <div class="paper">
+        <h2>Emprendimiento</h2>
+        <p class="phrase">
+          Te atreviste a creer en tu idea cuando aún era frágil. Esto es solo una pequeña parte de todo lo que eres capaz de hacer. Sigue más allá de la meta.
+        </p>
       </div>
     </div>
 
     <!-- 17 -->
-    <div class="goal" data-id="familia" data-points="50">
-      <div class="goal-header">
-        <h3>Compartir más con amigos y familia</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Quizás no todos merecen tu tiempo, pero identificar a quienes sí hace que el tiempo compartido siempre sea la mejor inversión.
+    <div class="goal" data-id="17" data-points="50">
+      <div class="paper">
+        <h2>Compartir más con amigos y familia</h2>
+        <p class="phrase">
+          Quizás no todos merecen tu tiempo, pero identificar a quienes sí lo merecen hace que compartir siempre sea la mejor inversión.
+        </p>
       </div>
     </div>
 
     <!-- 18 -->
-    <div class="goal" data-id="musica" data-points="50">
-      <div class="goal-header">
-        <h3>No alejarme de la música</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Gracias por no soltar lo que te sostiene por dentro. Nunca dejaste que el ruido apagara lo que te hace vibrar. Además, un día me pondrás el micrófono y sí sabré cómo es la letra de la canción para que la cantemos al unísono.
+    <div class="goal" data-id="18" data-points="50">
+      <div class="paper">
+        <h2>No alejarme de la música</h2>
+        <p class="phrase">
+          Gracias por no soltar lo que te sostiene por dentro. Nunca dejaste que el ruido apagara lo que te hace vibrar. Un día cantaremos al unísono.
+        </p>
       </div>
     </div>
 
     <!-- 19 -->
-    <div class="goal" data-id="cuidarme" data-points="50">
-      <div class="goal-header">
-        <h3>Cuidarme</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Escucharte fue el acto más valiente. No esperes soluciones externas cuando quien realmente debe identificar lo grandiosa que es, eres tú misma.
+    <div class="goal" data-id="19" data-points="50">
+      <div class="paper">
+        <h2>Cuidarme</h2>
+        <p class="phrase">
+          Escucharte fue el acto más valiente. No esperes soluciones externas cuando quien debe reconocer lo grandiosa que es… eres tú misma.
+        </p>
       </div>
     </div>
 
     <!-- 20 -->
-    <div class="goal" data-id="flores" data-points="30">
-      <div class="goal-header">
-        <h3>Girasoles y flores</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Si cumpliste esta meta, espero haber sido partícipe de ella y haberte dado más flores este año, sin que te lo esperaras, permitiéndome el pequeño capricho de verte feliz.
+    <div class="goal" data-id="20" data-points="30">
+      <div class="paper">
+        <h2>Girasoles y flores</h2>
+        <p class="phrase">
+          Si cumpliste esta, espero haber sido parte y haberte regalado más flores sin que lo esperaras, solo por el capricho de verte feliz.
+        </p>
       </div>
     </div>
 
     <!-- 21 -->
-    <div class="goal" data-id="disciplina" data-points="50">
-      <div class="goal-header">
-        <h3>Disciplina</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        No fue rigidez, fue constancia con propósito lo que te permitió lograr cada una de las metas y propósitos. De poco a poco se logran las grandes cosas, así que nunca desistas de seguirlo intentando, de seguir luchando por lo que mereces.
+    <div class="goal" data-id="21" data-points="50">
+      <div class="paper">
+        <h2>Disciplina</h2>
+        <p class="phrase">
+          No fue rigidez, fue constancia con propósito. De poco a poco se logran las grandes cosas. Nunca desistas.
+        </p>
       </div>
     </div>
 
     <!-- 22 -->
-    <div class="goal" data-id="idiomas" data-points="50">
-      <div class="goal-header">
-        <h3>Idiomas: inglés y francés</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Ahora tus ideas también saben viajar en otros idiomas. Espero que ahora sí podamos escuchar más música en inglés jeje, y que pueda alocarme escuchándote hablar en francés, porque sé que te queda muy bien.
+    <div class="goal" data-id="22" data-points="50">
+      <div class="paper">
+        <h2>Idiomas: inglés y francés</h2>
+        <p class="phrase">
+          Ahora tus ideas también saben viajar. Espero escuchar más música en inglés y perderme escuchándote hablar francés, porque te queda muy bien.
+        </p>
       </div>
     </div>
 
     <!-- 23 -->
-    <div class="goal" data-id="estudiar" data-points="50">
-      <div class="goal-header">
-        <h3>Estudiar</h3>
-        <button class="complete-btn">Meta cumplida</button>
-      </div>
-      <div class="goal-content">
-        Seguiste creciendo incluso cuando nadie estaba mirando, y es que eso eres tú: alguien que posee la capacidad de crecer más de lo que los demás llegaron a creer. Sigue así.
+    <div class="goal" data-id="23" data-points="50">
+      <div class="paper">
+        <h2>Estudiar</h2>
+        <p class="phrase">
+          Seguiste creciendo incluso cuando nadie miraba. Eso eres tú: alguien capaz de llegar más lejos de lo que otros creyeron.
+        </p>
       </div>
     </div>
 
-  </div>
+  </main>
 
-  <!-- RULETA -->
-  <div id="roulette-section" class="hidden">
-    <h2>🎡 Premio desbloqueado</h2>
-    <div id="roulette"></div>
-    <button id="spin">Girar</button>
-    <p id="result"></p>
-  </div>
-
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
