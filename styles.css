@@ -1,0 +1,153 @@
+/* =========================
+   VARIABLES DE COLOR
+========================= */
+:root {
+  --blue-main: #5B8DEF;
+  --blue-light: #EAF1FF;
+  --blue-dark: #2F4C8F;
+  --paper-bg: #ffffff;
+}
+
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY GENERAL
+========================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, var(--blue-light), #ffffff);
+  color: var(--blue-dark);
+  min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+.main-header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.main-header h1 {
+  font-weight: 600;
+  color: var(--blue-main);
+  font-size: 2.2rem;
+  user-select: none;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* =========================
+   CONTENEDOR DE METAS
+========================= */
+.goals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* =========================
+   PAPELITO (META)
+========================= */
+.goal {
+  perspective: 1000px;
+}
+
+.paper {
+  background: var(--paper-bg);
+  padding: 1.2rem 1.2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  position: relative;
+  min-height: 150px;
+}
+
+/* =========================
+   EFECTO PAPEL CERRADO
+========================= */
+.paper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(0, 0, 0, 0.05)
+  );
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+/* =========================
+   TÍTULO DE META
+========================= */
+.paper h2 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: var(--blue-dark);
+}
+
+/* =========================
+   FRASE (OCULTA POR DEFECTO)
+========================= */
+.phrase {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.6s ease;
+}
+
+/* =========================
+   PAPEL ABIERTO
+========================= */
+.goal.open .paper {
+  transform: translateY(-8px) rotateX(8deg);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+.goal.open .phrase {
+  opacity: 1;
+  max-height: 500px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+  .goals-container {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .paper {
+    padding: 1rem;
+  }
+
+  .paper h2 {
+    font-size: 1rem;
+  }
+
+  .phrase {
+    font-size: 0.9rem;
+  }
+}
