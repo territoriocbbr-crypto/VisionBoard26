@@ -1,49 +1,162 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f7f5f2;
-  padding: 20px;
+/* ===== RESET BÁSICO ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* ===== CUERPO ===== */
+body {
+  font-family: 'Georgia', serif;
+  background: #f7f5f2;
+  color: #2c2c2c;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ===== TÍTULOS ===== */
 h1 {
   text-align: center;
+  margin-bottom: 8px;
+  font-weight: normal;
 }
 
+.subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* ===== LISTA DE METAS ===== */
+#goals {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== TARJETA DE META ===== */
 .goal {
-  margin-bottom: 12px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  border-left: 4px solid transparent;
 }
 
+/* ===== META ABIERTA ===== */
+.goal.open {
+  border-left: 4px solid #c9a24d;
+  background: #fffdf8;
+}
+
+/* ===== CABECERA ===== */
 .goal-header {
-  width: 100%;
-  padding: 15px;
-  background: #e6dfd7;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.goal-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  background: white;
-  padding: 0 15px;
+.goal-header h3 {
+  font-size: 1.1rem;
+  font-weight: normal;
 }
 
-.goal.open .goal-content {
-  max-height: 200px;
-  padding: 15px;
-}
-
+/* ===== BOTÓN ===== */
 .complete-btn {
-  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #c9a24d;
+  color: #c9a24d;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.hidden {
+.complete-btn:hover {
+  background: #c9a24d;
+  color: #fff;
+}
+
+.complete-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* ===== CONTENIDO OCULTO ===== */
+.goal-content {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.6s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+/* ===== CONTENIDO VISIBLE ===== */
+.goal.open .goal-content {
+  max-height: 300px;
+  opacity: 1;
+}
+
+/* ===== RULETA ===== */
+#roulette-section {
+  margin-top: 60px;
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+#roulette-section.hidden {
   display: none;
 }
 
+#roulette-section h2 {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+/* ===== RULETA VISUAL SIMPLE ===== */
 #roulette {
-  font-size: 80px;
-  text-align: center;
-  transition: transform 2s ease;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  background: conic-gradient(
+    #c9a24d 0deg 90deg,
+    #e8d8a8 90deg 180deg,
+    #c9a24d 180deg 270deg,
+    #e8d8a8 270deg 360deg
+  );
+  transition: transform 2s ease-out;
+}
+
+/* ===== BOTÓN GIRAR ===== */
+#spin {
+  background: #c9a24d;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+#spin:hover {
+  background: #b18f3f;
+}
+
+/* ===== RESULTADO ===== */
+#result {
+  margin-top: 16px;
+  font-size: 1rem;
+  font-style: italic;
 }
